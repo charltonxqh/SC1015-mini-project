@@ -8,9 +8,9 @@ Team: 2
 
 ## Contributors
 
-- Charlton Siaw Qi Hen (@charltonxqh)
-- Chong Jia Chern (@goldenchern)
-- Tan Uei Horng (@tanueihorng)
+- Charlton Siaw Qi Hen ([@charltonxqh](https://github.com/charltonxqh))
+- Chong Jia Chern ([@goldenchern](https://github.com/goldenchern))
+- Tan Uei Horng ([@tanueihorng](https://github.com/tanueihorng))
 
 ## Table of Contents:
 
