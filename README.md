@@ -12,9 +12,7 @@ Team: 2
 - Chong Jia Chern (@goldenchern)
 - Tan Uei Horng (@tanueihorng)
 
-## Problem Definition
-
-## Models Used
+## Table of Contents:
 
 ## Conclusion
 
