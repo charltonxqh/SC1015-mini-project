@@ -11,7 +11,7 @@
 
 # ### 0. Importing Modules
 
-# In[1]:
+# In[37]:
 
 
 import numpy as np
@@ -33,15 +33,15 @@ from tensorflow.keras.metrics import mean_squared_error, mean_absolute_error, me
 # 
 # 
 
-# In[2]:
+# In[38]:
 
 
-voo_data = pd.read_csv('../datasets/VOO.csv')
-df = pd.read_csv('../datasets/VOO.csv')
+voo_data = pd.read_csv('../datasets/VOO_full.csv')
+df = pd.read_csv('../datasets/VOO_full.csv')
 display(voo_data)
 
 
-# In[3]:
+# In[39]:
 
 
 # Convert the 'Date' column to datetime format and set it as the index
@@ -53,7 +53,7 @@ df_close = df[['Close']]
 df_close
 
 
-# In[4]:
+# In[45]:
 
 
 # Since mplfinance expects certain column names for the OHLC data, ensure your DataFrame columns are named appropriately
@@ -72,21 +72,21 @@ mpf.plot(df, type='candle', style='charles', title='VOO Stock Price', ylabel='Pr
 # ### 2. Exploratory Data Analysis
 # 
 
-# In[5]:
+# In[46]:
 
 
 #Summary Statistics
 print(voo_data.describe())
 
 
-# In[6]:
+# In[47]:
 
 
 # Check for Missing Values
 print(voo_data.isnull().sum())
 
 
-# In[7]:
+# In[48]:
 
 
 # Correlation Matrix
@@ -100,7 +100,7 @@ plt.show()
 
 # ---
 
-# In[8]:
+# In[49]:
 
 
 # Closing Price and Moving Averages on One Chart
@@ -129,7 +129,7 @@ plt.show()
 # 
 # The overall chart shows the closing price of VOO, along with the short-term (MA50) and long-term (MA200) trends. The MA50 line reacts more quickly to recent price changes, while the MA200 provides a more gradual trend line that reflects longer-term price movements. When the closing price dips below these averages, it could be seen as a bearish signal, and when it's above, it could be bullish. The intersection points where the closing price or MA50 crosses the MA200 can be of particular interest to traders looking for trend reversals.
 
-# In[9]:
+# In[50]:
 
 
 # Daily Returns and Volatility in a Single Chart
@@ -154,22 +154,29 @@ plt.title('Daily Returns and Volatility')
 plt.show()
 
 
-# When the red line moves sharply away from the zero line, it indicates significant price changes from the previous day.
-# Peaks and troughs in the blue line show periods of high and low volatility, respectively. A higher blue line indicates that the price of the asset was fluctuating more during that period, signaling higher risk. Conversely, a lower blue line indicates less fluctuation and lower risk.
-# One can also look for patterns or correlations between the two lines. For instance, if large spikes in daily returns (red line) coincide with peaks in volatility (blue line), it suggests that higher returns are associated with higher risk.
-# It's also noteworthy to see if periods of increased volatility lead or follow large changes in daily returns, which might inform a trading strategy or risk management approach.
-# This kind of chart is particularly useful for traders and investors who wish to understand the risk-return profile of an asset over time and might be used to make decisions about timing entries and exits into the market.
+# When 
 
 # ---
 # 
 
 # ### 3. Training Set Preparation and Data Normalisation
 
-# In[10]:
+# In[77]:
+
+
+start_date = '1/3/2021'
+end_date = '28/3/2024'
+
+df = df[start_date:end_date]
+
+df
+
+
+# In[78]:
 
 
 # Prepare training set
-train_df = df_close
+train_df = df_close['1/3/2021':'28/2/2024']
 
 # Normalise data
 scaler = MinMaxScaler(feature_range=(0,1))      
@@ -197,7 +204,7 @@ x_train, y_train
 
 # ### 4. LSTM Model Building & Training
 
-# In[11]:
+# In[79]:
 
 
 def LSTM_model():
@@ -220,7 +227,7 @@ def LSTM_model():
 
 # #### Training
 
-# In[12]:
+# In[80]:
 
 
 model = LSTM_model()
@@ -228,7 +235,7 @@ model.summary()
 model.compile(optimizer='adam', loss='mean_squared_error')
 
 
-# In[21]:
+# In[81]:
 
 
 checkpointer = ModelCheckpoint(filepath='weights_best.weights.h5',  
@@ -248,29 +255,21 @@ history = model.fit(x_train,
 
 # ### 5. Predictions and Visualization
 
-# In[31]:
+# In[90]:
 
 
-# Load the test dataset
-test_df = pd.read_csv('../datasets/VOO_test.csv')
-
-# Convert the 'Date' column to datetime format for plotting purposes
-test_df['Date'] = pd.to_datetime(test_df['Date'])
-test_df.set_index('Date', inplace=True)
-
-# Now, focus on the 'Close' column
-test_df_close = test_df[['Close']].values
-
-
-# In[35]:
-
+# Prepare test dataset 
+test_df = df_close['1/3/2023':'28/3/2024']
+actual_prices = test_df['Close'].values
+display(test_df)
 
 model_inputs = df_close[len(train_df) - N_PRED_DAYS:].values
 model_inputs = model_inputs.reshape(-1,1)
 model_inputs = scaler.transform(model_inputs)
 
 
-# In[36]:
+
+# In[84]:
 
 
 x_test = []
@@ -286,6 +285,12 @@ x_test = np.reshape(x_test, (x_test.shape[0], x_test.shape[1], 1))
 predicted_prices = model.predict(x_test)
 # Perform an inverse transform to obtain actual values
 predicted_prices = scaler.inverse_transform(predicted_prices)
+
+
+# In[ ]:
+
+
+
 
 
 # ### 6. Evaluation & Observation
