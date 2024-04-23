@@ -1,4 +1,5 @@
-# SC1015-mini-project
+# Market Mavericks 
+## SC1015 Mini Project
 
 Lab Group: FCSF
 
@@ -6,22 +7,25 @@ Team: 2
 
 ## About
 
-The VOO Stock Prediction Project leverages advanced data analysis and machine learning techniques to predict the stock price movements of the Vanguard S&P 500 ETF (VOO). By integrating sentiment analysis from financial news and social media with historical price data through LSTM networks and ARIMA models, our goal is to offer a robust tool for investors seeking to make informed decisions in the stock market.
+The VOO Stock Prediction Project leverages advanced data analysis and machine learning techniques to predict the stock price movements of the Vanguard S&P 500 ETF (VOO). By integrating sentiment analysis with historical price data through LSTM networks and ARIMA models, our goal is to offer a robust tool for investors seeking to make informed decisions in the stock market.
 
-## Table of Contents (example)
+## Table of Contents 
 
+- [Contributors](#contributors)
 - [Project Overview](#project-overview)
 - [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
+- [Exploratory Data Analysis (EDA)](#eda)
 - [Data Sources](#data-sources)
-- [Methodology](#methodology)
-- [Model Architecture](#model-architecture)
-- [Results](#results)
-- [Future Work](#future-work)
-- [Contributing](#contributing)
-- [License](#license)
+- [Conclusion](#conclusion)
+- [What did we learn from this project?](#learn)
 - [Acknowledgments](#acknowledgments)
+- [References](#references)
+
+## Contributors
+
+- Charlton Siaw Qi Hen ([@charltonxqh](https://github.com/charltonxqh)) - Sentimental Analysis
+- Chong Jia Chern ([@goldenchern](https://github.com/goldenchern)) - ARIMA 
+- Tan Uei Horng ([@tanueihorng](https://github.com/tanueihorng)) - LSTM
 
 ## Project Overview
 
@@ -29,44 +33,50 @@ This project was conceived to address the need for more accurate and reliable st
 
 ## Features
 
-- Sentiment analysis of financial news and social media to gauge market sentiment.
+- Sentiment analysis of social media to gauge market sentiment.
 - Time series forecasting with LSTM networks tailored for stock price data.
 - ARIMA model implementation for comparison and integration with LSTM predictions.
 - Detailed performance evaluation and insights generation.
 
-## Contributors
+## Exploratory Data Analysis (EDA)
 
-- Charlton Siaw Qi Hen ([@charltonxqh](https://github.com/charltonxqh))
-- Chong Jia Chern ([@goldenchern](https://github.com/goldenchern))
-- Tan Uei Horng ([@tanueihorng](https://github.com/tanueihorng))
+1. Multicariate Exploration
+2. Closing Price & Moving Averages
+3. Daily Returns & Volatilily
+4. Seasonality Analysis 
+5. Day of the Week Effects
+6. Moving Average Convergence Divergence (MACD) Analysis
 
 ## Data Sources
 Historical Price Data: Sourced from Yahoo Finance
-Sentiment Data: Collected  from Reddit
+Sentiment Data: Collected from Reddit
 
 ## Conclusion
 
+- In evaluating predictive models for VOO price dataset, the **ARIMA model** demonstrates superior performance over LSTM based on MSE, RMSE, MAPE, and R² metrics. 
+
+- However, **LSTM** shows potential for improvement with extended training data, possibly outperforming ARIMA. By increasing the number of days we base our prediction on to N_PRED_DAYS = 100, the accuracy improved, resulting in a better fit curve and decreased uncertainty.
+
+- Additionally, **sentiment analysis** via FinBERT provides valuable insights into market sentiment's role alongside historical data in predicting stock prices. Integrating sentiment analysis with predictive models can offer a more comprehensive approach to stock price prediction, acknowledging the multidimensional nature of financial markets.
 
 ## What did we learn from this project?
 
-This project not only provided insights into the dynamic behavior of the stock market but also offered several key learning opportunities:
-
-1. **Complexity of Financial Markets:** We gained a deeper understanding of how multifaceted the financial markets are. Market sentiment, influenced by news and social media, plays a crucial role in the movement of stock prices.
-
-2. **Machine Learning in Finance:** Implementing LSTM and ARIMA models provided practical experience in applying advanced machine learning techniques to time-series prediction. We learned about the nuances of tuning and optimizing these models to handle non-stationary financial data effectively.
-
-3. **Performance Evaluation:** The project emphasized the importance of comprehensive performance evaluation. By comparing various models through metrics like MAE, MSE, and RMSE, we could objectively assess each model's predictive accuracy.
-
-4. **Team Collaboration and Problem Solving:** Working on this project fostered a collaborative environment where we tackled complex problems together. We learned the importance of communication and diverse perspectives in driving innovation.
-
-5. **Adaptability and Continuous Learning:** The project highlighted the need for continuous learning and adaptability in the face of evolving data and market conditions. Techniques and models that work today may need adjustment tomorrow.
+- Complexities of financial market 
+- Technical Indicators of Stock 
+- Applying advanced machine learning techniques to time-series prediction
+- Importance of comprehensive performance evaluation
+- Team Collaboration and Problem Solving
+- Git 
+- RNN, Keras, Tensorflow
 
 ## Acknowledgments
 
-We extend our deepest gratitude to a number of individuals and organizations whose contributions were invaluable to the success of this project:
+- **TA Li Yewen:** Special acknowledgment goes to our TA for the invaluable guidance and mentorship throughout the duration of this module.
+- **Dr Smitha:** We express our heartfelt gratitude to our lecturer for SC1015 for the expertise and support in shaping our understanding and proficiency of data science.
 
-- **Teaching Assistant Li Yewen:** Special acknowledgment goes to our TA, Li Yewen, who played an instrumental role throughout the project. His dedication, deep knowledge, and patience in guiding us through the intricacies of machine learning and data analysis were crucial to the success of our work.
-- **Open Source Community:** We appreciate the creators and maintainers of the Python libraries we utilized, including Pandas, NumPy, Scikit-Learn, Keras, and Plotly, among others. Their work on maintaining and enhancing these libraries made our analyses more efficient and effective.
-- **Our Team:** Last but not least, we acknowledge the hard work and dedication of our project team members. Their commitment was crucial in overcoming the challenges we faced and in ultimately delivering a project that we are proud of.
+## References
 
-## Reference
+- https://finance.yahoo.com/quote/VOO/
+- https://www.simplilearn.com/tutorials/artificial-intelligence-tutorial/lstm
+- https://www.kaggle.com/code/raoulma/ny-stock-price-prediction-rnn-lstm-gru 
+-
