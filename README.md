@@ -1,16 +1,16 @@
-# Welcome to the World of Finance!
+# Welcome to the World of Finance!:chart_with_upwards_trend:
 ## SC1015 Mini Project : VOO Stock Prediction
 
 FCSF Team 2
 
 ![description](https://github.com/charltonxqh/SC1015-mini-project/blob/main/READme_cover.png)
 
-## About
+## About 
 
 The VOO Stock Prediction Project leverages advanced data analysis and machine learning techniques to predict the stock price movements of the Vanguard S&P 500 ETF (VOO). By integrating sentiment analysis with historical price data through LSTM networks and ARIMA models, our goal is to offer a robust tool for investors seeking to make informed decisions in the stock market.
 
 ## Video Presentation on Youtube
-https://youtu.be/sXsFiSib0NI 
+ :clapper: https://youtu.be/sXsFiSib0NI 
 
 ## Table of Contents
 - [Contributors](#contributors)
