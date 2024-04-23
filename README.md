@@ -5,6 +5,8 @@ Lab Group: FCSF
 
 Team: 2
 
+![description](https://github.com/charltonxqh/SC1015-mini-project/blob/main/READme_cover.png)
+
 ## About
 
 The VOO Stock Prediction Project leverages advanced data analysis and machine learning techniques to predict the stock price movements of the Vanguard S&P 500 ETF (VOO). By integrating sentiment analysis with historical price data through LSTM networks and ARIMA models, our goal is to offer a robust tool for investors seeking to make informed decisions in the stock market.
