@@ -78,4 +78,6 @@ Sentiment Data: Collected from Reddit
 - https://finance.yahoo.com/quote/VOO/
 - https://www.simplilearn.com/tutorials/artificial-intelligence-tutorial/lstm
 - https://www.kaggle.com/code/raoulma/ny-stock-price-prediction-rnn-lstm-gru 
--
+- https://praw.readthedocs.io/en/stable/code_overview/praw_models.html
+- https://huggingface.co/yiyanghkust/finbert-tone
+- 
