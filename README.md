@@ -39,13 +39,12 @@ This project was conceived to address the need for more accurate and reliable st
 - Detailed performance evaluation and insights generation.
 
 ## Exploratory Data Analysis (EDA)
-
-1. Multicariate Exploration
-2. Closing Price & Moving Averages
-3. Daily Returns & Volatilily
-4. Seasonality Analysis 
-5. Day of the Week Effects
-6. Moving Average Convergence Divergence (MACD) Analysis
+- **Multivariate Exploration**
+- **Closing Price & Moving Averages**
+- **Daily Returns & Volatility**
+- **Seasonality Analysis**
+- **Day of the Week Effects**
+- **Moving Average Convergence Divergence (MACD) Analysis**
 
 ## Data Sources
 Historical Price Data: Sourced from Yahoo Finance
@@ -72,7 +71,7 @@ Sentiment Data: Collected from Reddit
 ## Acknowledgments
 
 - **TA Li Yewen:** Special acknowledgment goes to our TA for the invaluable guidance and mentorship throughout the duration of this module.
-- **Dr Smitha:** We express our heartfelt gratitude to our lecturer for SC1015 for the expertise and support in shaping our understanding and proficiency of data science.
+- **Dr Smitha:** Heartfelt gratitude to our course lecturer for the expertise and support in shaping our understanding and proficiency of data science.
 
 ## References
 
