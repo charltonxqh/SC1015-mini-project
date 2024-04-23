@@ -1,7 +1,7 @@
-# Welcome to the World of Finance!:chart_with_upwards_trend:
+# Welcome to the World of Finance!
 ## SC1015 Mini Project : VOO Stock Prediction
 
-FCSF Team 2
+:star2: FCSF Team 2 
 
 ![description](https://github.com/charltonxqh/SC1015-mini-project/blob/main/READme_cover.png)
 
