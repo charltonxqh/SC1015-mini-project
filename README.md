@@ -80,4 +80,5 @@ This project was conceived to address the need for more accurate and reliable st
 - https://www.kaggle.com/code/raoulma/ny-stock-price-prediction-rnn-lstm-gru 
 - https://praw.readthedocs.io/en/stable/code_overview/praw_models.html
 - https://huggingface.co/yiyanghkust/finbert-tone
-- 
+- https://medium.com/shikhars-data-science-projects/predicting-stock-prices-using-arima-fourier-transformation-and-deep-learning-e5fb4f693c85
+- https://www.projectpro.io/article/how-to-build-arima-model-in-python/544
