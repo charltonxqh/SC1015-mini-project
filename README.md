@@ -47,8 +47,8 @@ This project was conceived to address the need for more accurate and reliable st
 - **Moving Average Convergence Divergence (MACD) Analysis**
 
 ## Data Sources
-Historical Price Data: Sourced from Yahoo Finance
-Sentiment Data: Collected from Reddit
+- Historical Price Data: Sourced from Yahoo Finance
+- Sentiment Data: Collected from Reddit
 
 ## Conclusion
 
