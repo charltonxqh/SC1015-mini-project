@@ -1,9 +1,7 @@
 # Market Mavericks 
 ## SC1015 Mini Project
 
-Lab Group: FCSF
-
-Team: 2
+FCSF Team 2
 
 ![description](https://github.com/charltonxqh/SC1015-mini-project/blob/main/READme_cover.png)
 
