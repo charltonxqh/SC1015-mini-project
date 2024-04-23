@@ -1,5 +1,5 @@
-# Market Mavericks 
-## SC1015 Mini Project
+# Welcome to the World of Finance!
+## SC1015 Mini Project : VOO Stock Prediction
 
 FCSF Team 2
 
@@ -9,17 +9,17 @@ FCSF Team 2
 
 The VOO Stock Prediction Project leverages advanced data analysis and machine learning techniques to predict the stock price movements of the Vanguard S&P 500 ETF (VOO). By integrating sentiment analysis with historical price data through LSTM networks and ARIMA models, our goal is to offer a robust tool for investors seeking to make informed decisions in the stock market.
 
-## Table of Contents 
-
+## Table of Contents
 - [Contributors](#contributors)
 - [Project Overview](#project-overview)
 - [Features](#features)
-- [Exploratory Data Analysis (EDA)](#eda)
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis-eda)
 - [Data Sources](#data-sources)
 - [Conclusion](#conclusion)
-- [What did we learn from this project?](#learn)
+- [What Did We Learn?](#what-did-we-learn)
 - [Acknowledgments](#acknowledgments)
 - [References](#references)
+
 
 ## Contributors
 
